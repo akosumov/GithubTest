@@ -1,14 +1,14 @@
-export const transformDataSearch = data => {
+export const transformDataSearch = (data: any) => {
 	return (
 		data?.search.edges
 			.filter(
-				edge =>
+				(edge: any) =>
 					edge &&
 					edge.__typename === 'SearchResultItemEdge' &&
 					edge.node &&
 					edge.node.__typename === 'Repository'
 			)
-			.map(edge => {
+			.map((edge: any) => {
 				if (edge && edge.__typename === 'SearchResultItemEdge') {
 					if (edge.node && edge.node.__typename === 'Repository') {
 						return {
@@ -24,13 +24,14 @@ export const transformDataSearch = data => {
 	)
 }
 
-export const transformDataUser = data => {
+export const transformDataUser = (data: any) => {
 	return (
 		data?.user.repositories.nodes
 			.filter(
-				node => node && node.__typename === 'Repository' && node.description
+				(node: any) =>
+					node && node.__typename === 'Repository' && node.description
 			)
-			.map(node => {
+			.map((node: any) => {
 				if (node && node.__typename === 'Repository') {
 					if (node.node && node.node.__typename === 'Repository') {
 						return {

@@ -95,7 +95,7 @@ const Main = () => {
 
 			<div className='grid grid-cols-2 gap-y-14'>
 				{searchString
-					? paginatedOptions.map(rep => {
+					? paginatedOptions.map((rep: any) => {
 							return (
 								<div
 									className='w-96 border-y-2 border-gray-500 flex flex-col justify-start gap-y-2 '
@@ -122,7 +122,7 @@ const Main = () => {
 								</div>
 							)
 					  })
-					: paginatedOptions.map(rep => {
+					: paginatedOptions.map((rep: any) => {
 							return (
 								<div
 									className='w-96 border-y-2 border-gray-500 flex flex-col justify-start gap-y-2 '
