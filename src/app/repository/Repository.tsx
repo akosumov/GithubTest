@@ -54,11 +54,11 @@ const Repository = () => {
 		<div className='p-8 flex flex-col gap-10'>
 			<h1 className='text-white font-bold text-3xl'>GITHUB REPO</h1>
 			<div className='flex items-start gap-8 text-xl text-white'>
-				<img
+				{/* <img
 					src={avatarUrl}
 					alt={login}
 					className='w-32 h-32 rounded-full object-cover'
-				/>
+				/> */}
 				<div className='flex flex-col gap-y-2'>
 					<a href={url} className='text-white text-3xl font-semibold'>
 						{login}
